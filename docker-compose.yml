@@ -1,0 +1,17 @@
+version: '2'
+services:
+  action:
+    build: .
+    environment:
+      SLACK_BOT_TOKEN: 'dasfdsaf'
+    command: |-
+      '{
+        "channel": "12345678A",
+        "text": ":docker: image  was built successfully",
+        "blocks": [
+          {
+            "type": "section",
+            "text": { "type": "mrkdwn",  "text": ":+1: image  was built successfully" }
+          }
+        ]
+      }'
