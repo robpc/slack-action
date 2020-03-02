@@ -5,12 +5,12 @@ services:
     env_file: secrets.env
     command: |-
       '{
-        "channel": "12345678A",
-        "text": ":docker: image  was built successfully",
+        "channel": "#my-channel",
+        "text": ":docker: `image` was built successfully *TESTING*",
         "blocks": [
           {
             "type": "section",
-            "text": { "type": "mrkdwn",  "text": ":+1: image  was built successfully" }
+            "text": { "type": "mrkdwn",  "text": ":docker: `image` was built successfully *TESTING*" }
           }
         ]
       }'
