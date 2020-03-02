@@ -22,4 +22,4 @@ ADD index.js index.js
 
 ADD entrypoint.sh entrypoint.sh
 
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["/workdir/entrypoint.sh"]
