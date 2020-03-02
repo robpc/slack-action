@@ -2,8 +2,7 @@ version: '2'
 services:
   action:
     build: .
-    environment:
-      SLACK_BOT_TOKEN: 'dasfdsaf'
+    env_file: secrets.env
     command: |-
       '{
         "channel": "12345678A",
