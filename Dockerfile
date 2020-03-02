@@ -10,5 +10,9 @@ LABEL repository="http://github.com/pullreminders/slack-action"
 LABEL homepage="http://github.com/pullreminders/slack-action"
 LABEL maintainer="Abi Noda <abi@pullreminders.com>"
 
+USER root
+RUN apk add jq
+USER curl_user
+
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
